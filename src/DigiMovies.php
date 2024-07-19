@@ -18,13 +18,6 @@ class DigiMovies {
         'animeSeries' => "https://digimoviez.com/category/%d8%a7%d9%86%db%8c%d9%85%d9%87"
     ];
 
-    private string $my_server;
-
-    public function __construct()
-    {
-        $this->my_server = 'https://' . $_SERVER['HTTP_HOST'];
-    }
-
     private function getMovies($url, $page = false): string
     {
 
@@ -46,9 +39,8 @@ class DigiMovies {
                 $node->filter('a')->each(function ($node) use (&$movie) {
                     $movie['title'] = str_replace("دانلود ", null, $node->attr('title'));
                     $key = str_replace($this->routes['base'] . "/", null , $node->attr('href'));
-                    $key = str_replace("/", null , $key);
-                    $url = $this->my_server . "?type=getMovie&key=" . $key;
-                    $movie['url'] = $url;
+                    $url = $key;
+                    $movie['key'] = $url;
 
                     $node->filter('.cover img')->each(function ($node) use (&$movie) {
                         $movie['cover'] = $node->attr('src');
@@ -108,9 +100,8 @@ class DigiMovies {
 
                 $node->filter('.title_h a')->each(function ($node) use (&$movie) {
                     $key = str_replace($this->routes['base'] . "/", null , $node->attr('href'));
-                    $key = str_replace("/", null , $key);
-                    $url = $this->my_server . "?type=getMovie&key=" . $key;
-                    $movie['url'] = $url;
+                    $url = $key;
+                    $movie['key'] = $url;
                     $movie['title'] = str_replace("دانلود ", null, $node->attr('title'));
                 });
 
@@ -205,9 +196,8 @@ class DigiMovies {
 
                 $node->filter('.on_inner_post_holder > .cover > .inner_cover > a')->each(function ($node) use (&$movie_data) {
                     $key = str_replace($this->routes['base'] . "/", null , $node->attr('href'));
-                    $key = str_replace("/", null , $key);
-                    $url = $this->my_server . "?type=getMovie&key=" . $key;
-                    $movie_data['url'] = $url;
+                    $url = $key;
+                    $movie['key'] = $url;
                     $movie_data['title'] = str_replace("دانلود ", null, $node->attr('title'));
 
 

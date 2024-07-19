@@ -1,8 +1,8 @@
-<?php namespace Movie;
+<?php namespace Movies;
 
 use Goutte\Client;
 
-class Movie {
+class DigiMovies {
 
     private array $routes = [
         'base' => "https://digimoviez.com",

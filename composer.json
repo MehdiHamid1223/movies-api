@@ -1,0 +1,21 @@
+{
+    "name": "mehdihamid/movies-api",
+    "description": "this is movies api",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Movie\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mehdi hamid",
+            "email": "nehdi.hamid0012@gmail.com",
+            "homepage": "https://github.com/MehdiHamid1223"
+        }
+    ],
+    "require": {
+        "fabpot/goutte": "^4.0"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mehdihamid/movies-api": "^1.0"
+    }
+}

@@ -15,7 +15,7 @@ Add ```mehdihamid/movies-api``` as a require dependency in your ```composer.json
 Create a Goutte Client instance 
 
 ```php
-use Goutte\Client;
+use Movies\DigiMovies;
 
 $client = new Client();
 ```

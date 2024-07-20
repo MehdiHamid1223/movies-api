@@ -17,7 +17,7 @@ Create a Goutte Client instance
 ```php
 use Movies\DigiMovies;
 
-$client = new Client();
+$client = new DigiMovies();
 ```
 
 Get a list of categories

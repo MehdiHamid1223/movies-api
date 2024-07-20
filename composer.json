@@ -1,6 +1,12 @@
 {
     "name": "mehdihamid/movies-api",
-    "description": "this is movies api",
+    "description": "movies-api package is a free movie and TV series web service library connected to the DigiMovies website for front-end developers",
+    "keywords": [
+        "movies-api",
+        "DigiMovies",
+        "دیجی موویز"
+    ],
+    "homepage": "https://github.com/MehdiHamid1223/movies-api",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -8,6 +14,9 @@
             "Movies\\": "src/"
         }
     },
+    "require": {
+        "php": ">=8.0"
+    }
     "authors": [
         {
             "name": "mehdi hamid",
